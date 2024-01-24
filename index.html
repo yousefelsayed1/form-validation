@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label for="name-input">Full Name</label>
+                <input type="text" placeholder="Enter your name" id="name-input" onkeyup="nameValidation()">
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="phone-input">Phone No.</label>
+                <input type="text" placeholder="123 4567 8910" id="phone-input" onkeyup="phoneValidation()">
+                <span id="phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email-input">Email Id</label>
+                <input type="text" placeholder="Enter your @email" id="email-input" onkeyup="emailValidation()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="message-input">Your Message</label>
+                <textarea rows="5" name="message" placeholder="Enter your Message" id="message-input" onkeyup="messageValidation()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <button onclick="return formValidation() ">Submit</button>
+            <span id="submit-error "></span>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
