@@ -56,12 +56,12 @@ function messageValidation() {
     var message = document.getElementById("message-input").value;
     var required = 30;
     var left = required - message.length;
-    if (left > 0) {
-        messageError.innerHTML = left + "more characters required"
-        return false;
-    }
     if (!message.match(/^[A-Za-z0-9!\s\._\-]*$/)) {
         messageError.innerHTML = "Invalid special characters";
+        return false;
+    }
+    if (left > 0) {
+        messageError.innerHTML = left + "more characters required"
         return false;
     }
     messageError.innerHTML = `<i class="fa fa-check-circle"></i>`;
